@@ -1,0 +1,9 @@
+Current clouds SLAs include compensation for customers with credits when average
+availability drops below a certain point. However, this credit scheme is too inflexible because consumers lose a non measurable quantity of performance and are only compensated later, that is, in the next charging cycle.
+
+We propose to schedule cloud isolation and execution units, virtual machines (VMs), driven by a range-based non-linear utility depreciation, that is different for classes of users and across different ranges of resource allocations, which we call partial utility. This metric, specified by the customer, allows the provider to drive the transfer resources between VMs in a meaningful and economically efficient way.
+
+This is also particularly relevant for private clouds where resources are not so abundant.
+We have defined a comprehensive cost model that incorporates the partial utility the client gives to a certain level of depreciation when VMs are allocated in an overcommitted environment. CloudSim, a state of the art cloud simulator, was extended to support our scheduling model.
+
+Several simulation scenarios with synthetic and real workloads are presented, using datacenters with different dimensions regarding the number of servers and computational capacity. We show that the partial utility-driven driven scheduling allows more VMs to be allocated. It thus brings benefits to providers, regarding revenue and resource utilization, allowing for more revenue per resource allocated and scaling well with the size of datacenters when comparing with an utility-oblivious redistribution of resources. Regarding clients, their workloads' execution time is also improved, by incorporating an SLA-based redistribution of their VM's computational power.
